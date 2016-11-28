@@ -1,0 +1,163 @@
+
+nav.navbar.navbar-dark.navbar-fixed-top.scrolling-navbar(ng-controller="mvNavBarCtrl", click-out="hide()")
+  // Collapse button
+  button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#collapseEx')
+    i.fa.fa-bars
+  .container
+    // Collapse content
+    #collapseEx.collapse.navbar-toggleable-xs
+      // Navbar Brand
+      a.navbar-brand(ng-href="/", ng-hide="identity.isAuthenticated()") LOGO
+      // Links
+      ul.nav.navbar-nav(ng-hide="identity.isAuthenticated()")
+        // Đang ở tab hiện tại
+        //
+          <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        li.nav-item
+          .btn-group
+            button.btn.p-btn-tranparent.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Phim le
+            .dropdown-menu
+              a.dropdown-item(href='category/hanhdong') Phim hành động
+              a.dropdown-item(href='category/hoathinh') Phim hoạt hình
+              a.dropdown-item(href='category/vientuong') Phim viễn tưởng
+              .dropdown-divider
+              a.dropdown-item(href='category/tailieu') Phim tài liệu
+        li.nav-item
+          .btn-group
+            button.btn.p-btn-tranparent.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Phim bo
+            .dropdown-menu
+              a.dropdown-item(href='category/trungquoc') Phim Trung Quốc
+              a.dropdown-item(href='category/nhat') Phim Nhật
+              a.dropdown-item(href='category/nga') Phim Nga
+              .dropdown-divider
+              a.dropdown-item(href='category/my') Phim Mỹ
+        li.nav-item
+          .btn-group
+            button.btn.p-btn-tranparent(type='button')
+              a(href="tintuc") Tin tuc
+        li.nav-item
+          .btn-group
+            button.btn.p-btn-tranparent(type='button') Tivi show
+        li.nav-item
+          .btn-group
+            button.btn.p-btn-tranparent.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') More
+            .dropdown-menu
+              a.dropdown-item(href='#') Phim 2016
+              a.dropdown-item(href='#') Trailer
+              a.dropdown-item(href='#') Phim 2015
+              .dropdown-divider
+              a.dropdown-item(href='#') Phim thuyết minh
+      .pull-left(ng-show="identity.isAuthenticated()")
+        //- md-button.md-raised(ng-click='toggleLeft()')
+        //-   | Toggle Sidenav
+        //- a.button-collapse(href='', data-activates='slide-out', ng-click="clickButtonAdmin()")
+        //-   i.fa.fa-bars
+        //- div(ng-include="'/partials/common/sidebar'")
+        sidebardirective
+      .pull-right(ng-hide="identity.isAuthenticated()")
+        button.btn.btn-danger.p-btn-height(type='button', data-toggle='modal', data-target='#modal-login')
+          | Đăng nhập
+        // Modal Login
+        #modal-login.modal.fade.modal-ext(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true', data-backdrop='false')
+          .modal-dialog(role='document')
+            // Content
+            .modal-content
+              // Header
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+                h3
+                  i.fa.fa-user
+                  |  Đăng nhập
+              // Body
+              .modal-body
+                .md-form
+                  i.fa.fa-envelope.prefix
+                  input#form2.form-control(type='text' ng-model="username")
+                  label.height-auto(for='form2') Your email
+                .md-form
+                  i.fa.fa-lock.prefix
+                  input#form3.form-control(type='password' ng-model="password")
+                  label.height-auto(for='form3') Your password
+                .text-xs-center
+                  button.btn.btn-primary.btn-lg(ng-click="signin(username, password)") Login
+              // Footer
+              .modal-footer
+                .options
+                  p
+                    | Not a member? 
+                    a(href='#') Sign Up
+                  p
+                    | Forgot 
+                    a(href='#') Password?
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+            // /.Content
+        button.btn.btn-warning.p-btn-height(type='button', data-toggle='modal', data-target='#modal-register')
+          | Đăng ký
+        // Modal Register
+        #modal-register.modal.fade.modal-ext(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true', data-backdrop='false')
+          .modal-dialog(role='document')
+            // Content
+            .modal-content
+              // Header
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+                h3
+                  i.fa.fa-user
+                  |  Register with:
+                a.btn-floating.btn-fb.btn-small(ng-click="signinFacebook()")
+                  i.fa.fa-facebook
+                a.btn-floating.btn-tw.btn-small(href='')
+                  i.fa.fa-twitter
+                a.btn-floating.btn-gplus.btn-small(href='')
+                  i.fa.fa-google-plus
+                a.btn-floating.btn-li.btn-small(href='')
+                  i.fa.fa-linkedin
+                a.btn-floating.btn-git.btn-small(href='')
+                  i.fa.fa-github
+              // Body
+              .modal-body
+                .md-form
+                  i.fa.fa-envelope.prefix
+                  input#form2.form-control(type='text' ng-model="email")
+                  label.height-auto(for='form2') Your email
+                .md-form
+                  i.fa.fa-lock.prefix
+                  input#form3.form-control(type='password' ng-model="password")
+                  label.height-auto(for='form3') Your password
+                .md-form
+                  i.fa.fa-lock.prefix
+                  input#form4.form-control(type='password')
+                  label.height-auto(for='form4') Repeat password
+                .text-xs-center
+                  button.btn.btn-primary.btn-lg(ng-click="signup()", ng-disabled="signupForm.$invalid") Sign up
+                  fieldset.form-group
+                    input#checkbox1(type='checkbox')
+                    label(for='checkbox1') Subscribe me to the newsletter
+              // Footer
+              .modal-footer
+                .options
+                  p
+                    | Already have an account? 
+                    a(href='#') Log in
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+            // /.Content
+      .pull-right(ng-show="identity.isAuthenticated()")
+        .btn-group
+          button.btn.p-btn-tranparent.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+              b.caret
+          .dropdown-menu
+            a.dropdown-item(ng-show="identity.currentUser.isAdmin()" href='/admin/dashboard') Dashboard
+            a.dropdown-item(href='/profile') Profile
+            .dropdown-divider
+            a.dropdown-item(href='' ng-click="signout()") Sign out
+      // Search form
+      form.form-inline
+        input#search.form-control(type='text', placeholder='Search', ng-model="valueSearch", ng-keyup="$event.keyCode == 13 && search()")
+    // /.Collapse content
+
+

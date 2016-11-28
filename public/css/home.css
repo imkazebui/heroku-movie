@@ -1,0 +1,103 @@
+/*author: Phuong Bui*/
+/*material bootstrap by my style*/
+
+.p-btn-tranparent {
+  background: transparent;
+  box-shadow: none;
+  text-transform: none;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.65rem 0.93rem;
+}
+
+.p-btn-height {
+  padding: 0.45rem 2.13rem;
+}
+
+
+.collection-card .p-stripe {
+  bottom: 0rem;
+  padding: 0.6rem;
+}
+
+/* TEMPLATE STYLES */
+/* Necessary for full page carousel*/
+
+html,
+body,
+.view {
+    height: 100%;
+}
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: #1C2331;
+}
+
+footer.page-footer {
+    background-color: #1C2331;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #1C2331;
+    }
+}
+/* Carousel*/
+
+.carousel,
+.carousel-item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.flex-center {
+    color: #fff;
+}
+
+.carousel-caption {
+    height: 100%;
+    padding-top: 7rem;
+}
+
+@media (min-width: 776px) {
+    .carousel .view ul li {
+        display: inline;
+    }
+    .carousel .view .full-bg-img ul li .flex-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.magazine-section .single-news {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.height-auto {
+    height: auto;
+}
+
+@media (min-width: 992px)
+.p-m-b-r {
+    margin-bottom: 0.5rem!important;
+}
+
+.carousel-multi-item .controls-top, .carousel-multi-item {
+    margin-bottom: 0;
+}

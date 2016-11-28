@@ -1,0 +1,195 @@
+section.section.container-fluid(style='margin-top: 5rem;')(ng-hide="show")
+  h1.section-heading Không tìm thấy phim
+.container(style='margin-top: 5rem;')(ng-show="show")
+  h5.row {{movie.titleEng}}
+  h5.row {{movie.titleVi}}
+  .embed-responsive.embed-responsive-16by9.row
+    iframe.embed-responsive-item(ng-src='{{source}}', allowfullscreen='')
+  .row List video lien quan  
+  .row
+    .col-md-4
+      .row
+        .card
+          .card-header.card-primary.white-text.text-xs-center Thong tin
+          ul.list-group
+            li.list-group-item
+              ul
+                li Ten phim: {{movie.titleVi}}
+                li Ten tieng Anh: {{movie.titleEng}}
+                li Nam san xuat: {{movie.year}}
+                li The loai:
+                li Quoc gia
+                li Thoi luong
+                li Dao dien
+                li IMDb
+            li.list-group-item Từ khóa
+            li.list-group-item Diễn viên
+        // /.Panel
+      .row
+        .card
+          .card-header.card-primary.white-text.text-xs-center Trailer
+          .embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item(src='{{trailer}}', allowfullscreen='')        
+        // /.Panel
+      .row
+        .card
+          .card-header.card-primary.white-text.text-xs-center Hình ảnh
+          .card-block
+            p.card-text chèn cái lightbox là oke
+        // /.Panel
+      .row
+        .card
+          .card-header.card-primary.white-text.text-xs-center Phim lien quan
+          .card-block
+            p.card-text hien thi phim lien quan
+        // /.Panel
+      .row
+        .card
+          .card-header.card-primary.white-text.text-xs-center FanPage
+          .fb-page(data-href='https://www.facebook.com/HanhTrinhBiAn', data-width='380', data-hide-cover='false', data-show-facepile='true', data-show-posts='true')
+        // /.Panel
+    .col-md-8
+      .card
+        .card-header.card-primary.white-text.text-xs-center
+          | Bình luận 
+        .card-block
+          .fb-comments(data-href='http://movie-vp.heroku.com/xemphim/{{id}}', data-width='auto', data-numposts='5', data-colorscheme='light')
+
+          // Leave a reply form
+          .reply-form
+            // Third row
+            .row
+              // Image column
+              .col-sm-2.col-xs-12
+                img(src='http://mdbootstrap.com/images/avatars/img%20(3).jpg')
+              // /.Image column
+              // Content column
+              .col-sm-10.col-xs-12
+                .md-form
+                  textarea#form8.md-textarea(type='text')
+                  label(for='form8') Thêm bình luận
+              .text-xs-right
+                button.btn.btn-primary Submit
+              // /.Content column
+            // /.Third row
+          // /.Leave a reply form
+          // Section: Comments list
+          .comments-list
+            // First row
+            .row
+              // Image column
+              .col-sm-2.col-xs-12
+                img(src='http://mdbootstrap.com/images/avatars/avatar-1.jpg')
+              // /.Image column
+              // Content column
+              .col-sm-10.col-xs-12
+                a
+                  h3.user-name John Doe
+                ul
+                  li.comment-date
+                    i.fa.fa-clock-o
+                    |  05/10/2015
+                p.comment-text
+                  | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  | cupidatat non proident.
+              // /.Content column
+            // /.First row
+            // Second row
+            .row
+              // Image column
+              .col-sm-2.col-xs-12
+                img(src='http://mdbootstrap.com/images/avatars/avatar-2.jpg')
+              // /.Image column
+              // Content column
+              .col-sm-10.col-xs-12
+                a
+                  h3.user-name Marta Tev
+                ul
+                  li.comment-date
+                    i.fa.fa-clock-o
+                    |  08/10/2015
+                p.comment-text
+                  | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                  | voluptatem quia voluptas sit aspernatur.
+              // /.Content column
+            // /.Second row
+            // Third row
+            .row
+              // Image column
+              .col-sm-2.col-xs-12
+                img(src='http://mdbootstrap.com/images/avatars/img%20(1).jpg')
+              // /.Image column
+              // Content column
+              .col-sm-10.col-xs-12
+                a
+                  h3.user-name Anna Maria
+                ul
+                  li.comment-date
+                    i.fa.fa-clock-o
+                    |  17/10/2015
+                p.comment-text
+                  | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                  | qui officia.
+              // /.Content column
+            // /.Third row
+          // /Section: Comments list
+      .card
+        .card-header.card-primary.white-text.text-xs-center Tin liên quan
+        .card-block
+          // First row
+          .row
+            // First column
+            .col-md-5.mb-r
+              // Featured image
+              .view.overlay.hm-white-slight
+                img(src='http://mdbootstrap.com/images/regular/people/img%20(88).jpg')
+                a
+                  .mask
+            // /First column
+            // Second column
+            .col-md-7.mb-r
+              // Excerpt
+              h4 Interpersonal communication - what is your style?
+              p
+                | Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis aut rerum.
+            // /Second column
+          // /First row
+          hr
+          // Second row
+          .row
+            // First column
+            .col-md-5.mb-r
+              // Featured image
+              .view.overlay.hm-white-slight
+                img(src='http://mdbootstrap.com/images/regular/food/img%20(14).jpg')
+                a
+                  .mask
+            // /First column
+            // Second column
+            .col-md-7.mb-r
+              // Excerpt
+              h4 Food culture - explore the rituals of eating in the world.
+              p
+                | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et dolorum fuga.
+            // /Second column
+          // /Second row
+          hr
+          // Third row
+          .row
+            // First column
+            .col-md-5.mb-r
+              // Featured image
+              .view.overlay.hm-white-slight
+                img(src='http://mdbootstrap.com/images/regular/nature/img%20(78).jpg')
+                a
+                  .mask
+            // /First column
+            // Second column
+            .col-md-7.mb-r
+              // Excerpt
+              h4 10 tips on how to photograph the lake.
+              p
+                | Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+            // /Second column
+          // /Third row
+      // /.Panel

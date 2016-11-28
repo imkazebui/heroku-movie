@@ -1,0 +1,31 @@
+{
+  "name": "Movie-VP",
+  "version": "0.0.0",
+  "description": "System for Movie Information",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {},
+  "author": "Team VP",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "angular-clickout": "^1.0.2",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "promise": "^7.1.1",
+    "stylus": "^0.54.5"
+  }
+}
+
+    // "angular": "~1.2.16",
+    // "angular-resource": "~1.2.16",
+    // "angular-route": "~1.2.16",
+    // "angular-mocks": "~1.2.16",

@@ -1,0 +1,28 @@
+<div>
+  <a href="" data-activates="slide-out" ng-click="clickButtonAdmin()" class="button-collapse"><i class="fa fa-bars"></i></a>
+  <!-- Sidebar navigation-->
+  <ul id="slide-out" ng-show="isPopupVisible" class="side-nav fixed default-side-nav light-side-nav special-color">
+    <div class="card testimonial-card">
+
+        <!--Bacground color-->
+        <div class="card-up default-color-dark" style="height: 80px;">
+        </div>
+
+        <!--Avatar-->
+        <div style="width: 80px; margin: -80px auto 0; height: auto;" class="avatar">
+          <img src="http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-2.jpg" class="rounded-circle img-responsive">
+        </div>
+        <h4 class="card-title flex-center default-color-dark">{{identity.currentUser.firstName + " " + identity.currentUser.lastName}}</h4>
+
+    </div>
+    <ul class="list-group" style="box-shadow: none;">
+      <li class="waves-effect arrow-r list-group-item special-color" style="border: none;">Cras justo odio</li>
+      <li class="waves-effect arrow-r list-group-item special-color" style="border: none;">Dapibus ac facilisis in</li>
+      <li class="waves-effect arrow-r list-group-item special-color" style="border: none;">Morbi leo risus</li>
+      <li class="waves-effect arrow-r list-group-item special-color" style="border: none;">Porta ac consectetur ac</li>
+      <li class="waves-effect arrow-r list-group-item special-color" style="border: none;">Vestibulum at eros</li>
+    </ul>
+
+  </ul>
+  <!-- /. Sidebar navigation-->
+</div>

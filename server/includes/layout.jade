@@ -1,0 +1,22 @@
+doctype
+html
+  head
+    title Movie-VP
+    base(href="/")
+    link(href="/favicon.ico", rel="shortcut icon", type="image/x-icon")
+    link(rel="stylesheet", href="/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/css/compiled.min.css")
+    link(rel="stylesheet", href="/vendor/toastr/toastr.css")
+    link(rel="stylesheet", href="/css/home.css")
+    link(rel="stylesheet", href="/css/angular-material.min.css")
+
+    //- admin
+    //- link(rel="stylesheet", href="/css/admin/materialadmin.css")
+    //- link(rel="stylesheet", href="/css/admin/material-design-iconic-font.min.css")
+    //- link(rel="stylesheet", href="/css/admin/lightbox.css")
+    //- end admin
+  body(ng-app='app')
+    include currentUser
+    block main-content
+    include scripts

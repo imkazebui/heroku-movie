@@ -1,0 +1,288 @@
+.section-body
+  .row
+    .col-md-3.col-sm-6
+      .card
+        .card-body.no-padding
+          .alert.alert-callout.alert-info.no-margin
+            strong.pull-right.text-success.text-lg
+              | 0,38% 
+              i.md.md-trending-up
+            strong.text-xl $ 32,829
+            br
+            span.opacity-50 Revenue
+        // end .card-body
+      // end .card
+    // end .col
+    // BEGIN ALERT - VISITS
+    .col-md-3.col-sm-6
+      .card
+        .card-body.no-padding
+          .alert.alert-callout.alert-warning.no-margin
+            strong.pull-right.text-warning.text-lg
+              | 0,01% 
+              i.md.md-swap-vert
+            strong.text-xl 432,901
+            br
+            span.opacity-50 Visits
+        // end .card-body
+      // end .card
+    // end .col
+    // END ALERT - VISITS
+    // BEGIN ALERT - BOUNCE RATES
+    .col-md-3.col-sm-6
+      .card
+        .card-body.no-padding
+          .alert.alert-callout.alert-danger.no-margin
+            strong.pull-right.text-danger.text-lg
+              | 0,18% 
+              i.md.md-trending-down
+            strong.text-xl 42.90%
+            br
+            span.opacity-50 Bounce rate
+            .stick-bottom-left-right
+              .progress.progress-hairline.no-margin
+                .progress-bar.progress-bar-danger(style='width:43%')
+        // end .card-body
+      // end .card
+    // end .col
+    // END ALERT - BOUNCE RATES
+    // BEGIN ALERT - TIME ON SITE
+    .col-md-3.col-sm-6
+      .card
+        .card-body.no-padding
+          .alert.alert-callout.alert-success.no-margin
+            h1.pull-right.text-success
+              i.md.md-timer
+            strong.text-xl 54 sec.
+            br
+            span.opacity-50 Avg. time on site
+        // end .card-body
+      // end .card
+    // end .col
+    // END ALERT - TIME ON SITE
+  // end .row
+  .row
+    // BEGIN SITE ACTIVITY
+    .col-md-9
+      .card
+        .row
+          .col-md-8
+            .card-head
+              header Site activity
+            // end .card-head
+            .card-body.height-8
+            // end .card-body
+          // end .col
+          .col-md-4
+            .card-head
+              header Today's stats
+            .card-body.height-8
+              strong 214
+              |  members
+              span.pull-right.text-success.text-sm
+                | 0,18% 
+                i.md.md-trending-up
+              .progress.progress-hairline
+                .progress-bar.progress-bar-primary-dark(style='width:43%')
+              |               756 pageviews
+              span.pull-right.text-success.text-sm
+                | 0,68% 
+                i.md.md-trending-up
+              .progress.progress-hairline
+                .progress-bar.progress-bar-primary-dark(style='width:11%')
+              |               291 bounce rates
+              span.pull-right.text-danger.text-sm
+                | 21,08% 
+                i.md.md-trending-down
+              .progress.progress-hairline
+                .progress-bar.progress-bar-danger(style='width:93%')
+              |               32,301 visits
+              span.pull-right.text-success.text-sm
+                | 0,18% 
+                i.md.md-trending-up
+              .progress.progress-hairline
+                .progress-bar.progress-bar-primary-dark(style='width:63%')
+              |               132 pages
+              span.pull-right.text-success.text-sm
+                | 0,18% 
+                i.md.md-trending-up
+              .progress.progress-hairline
+                .progress-bar.progress-bar-primary-dark(style='width:47%')
+            // end .card-body
+          // end .col
+        // end .row
+      // end .card
+    // end .col
+    // END SITE ACTIVITY
+    // BEGIN RECENT COMMENT
+    .col-md-3
+      .card
+        .card-head
+          header.text-primary Recent comment
+        // end .card-head
+        .card-body.height-4
+          .pull-right.text-center
+        // end .card-body
+        .card-body.height-4.no-padding
+          .stick-bottom-left-right
+        // end .card-body
+      // end .card
+    // end .col
+    // END SERVER STATUS
+  // end .row
+  .row
+    // BEGIN TODOS
+    .col-md-3
+      .card
+        .card-head
+          header Todo's
+          .tools
+            a.btn.btn-icon-toggle.btn-close
+              i.md.md-close
+        // end .card-head
+        .card-body.no-padding.height-9.scroll
+          ul.list(data-sortable='true')
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox', checked='')
+                  span Call clients for follow-up
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox')
+                  span
+                    | Schedule meeting
+                    small opportunity for new customers
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox')
+                  span
+                    | Upload files to server
+                    small The files must be shared with all members of the board
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox')
+                  span Forward important tasks
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox')
+                  span Forward important tasks
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+            li.tile
+              .checkbox.checkbox-styled.tile-text
+                label
+                  input(type='checkbox')
+                  span Forward important tasks
+              a.btn.btn-flat.ink-reaction.btn-default
+                i.md.md-delete
+        // end .card-body
+      // end .card
+    // end .col
+    // END TODOS
+    // BEGIN REGISTRATION HISTORY
+    .col-md-6
+      .card
+        .card-head
+          header Registration history
+          .tools
+            a.btn.btn-icon-toggle.btn-refresh
+              i.md.md-refresh
+            a.btn.btn-icon-toggle.btn-collapse
+              i.fa.fa-angle-down
+            a.btn.btn-icon-toggle.btn-close
+              i.md.md-close
+        // end .card-head
+        .card-body.no-padding.height-9
+          .row
+            .col-sm-6.hidden-xs
+              .force-padding.text-sm.text-default-light
+                p
+                  i.md.md-mode-comment.text-primary-light
+                  |                   The registrations are measured from the time that the redesign was fully implemented and after the first e-mailing.
+            // end .col
+            .col-sm-6
+              .force-padding.pull-right.text-default-light
+                h2.no-margin.text-primary-dark
+                  span.text-xxl 66.05%
+                i.fa.fa-caret-up.text-success.fa-fw
+                |  more registrations
+            // end .col
+          // end .row
+          .stick-bottom-left-right.force-padding
+            #flot-registrations.flot.height-5(data-title='Registration history', data-color='#0aa89e')
+        // end .card-body
+      // end .card
+    // end .col
+    // END REGISTRATION HISTORY
+    // BEGIN NEW REGISTRATIONS
+    .col-md-3
+      .card
+        .card-head
+          header New registrations
+          .tools.hidden-md
+            a.btn.btn-icon-toggle.btn-close
+              i.md.md-close
+        // end .card-head
+        .card-body.no-padding.height-9.scroll
+          ul.list.divider-full-bleed
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar9.jpg?1404026744', alt='')
+                .tile-text Ann Laurens
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar4.jpg?1404026791', alt='')
+                .tile-text Alex Nelson
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar11.jpg?1404026774', alt='')
+                .tile-text Mary Peterson
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar7.jpg?1404026721', alt='')
+                .tile-text Philip Ericsson
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar8.jpg?1404026729', alt='')
+                .tile-text Jim Peters
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+            li.tile
+              .tile-content
+                .tile-icon
+                  img(src='../../assets/img/avatar2.jpg?1404026449', alt='')
+                .tile-text Jessica Cruise
+              a.btn.btn-flat.ink-reaction
+                i.md.md-block.text-default-light
+        // end .card-body
+      // end .card
+    // end .col
+    // END NEW REGISTRATIONS
+  // end .row
+// end .section-body

@@ -1,0 +1,8 @@
+extends ../includes/layout
+
+block main-content
+  div(ng-include="'/partials/common/header'")
+
+  div(ng-view style='display: initial;')
+
+  div(ng-include="'/partials/common/footer'")

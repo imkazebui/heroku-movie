@@ -1,0 +1,325 @@
+// Sap dien ra Section: Products v.5
+section.section
+  // Section heading
+  // Section sescription
+  // <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
+  // Carousel Wrapper
+  #multi-item-example.carousel.slide.carousel-multi-item(data-ride='carousel')
+    // Indicators
+    //
+      <ol class="carousel-indicators">
+      <li class="primary-color" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li class="primary-color" data-target="#multi-item-example" data-slide-to="1"></li>
+      <li class="primary-color" data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+    // /.Indicators
+    // Slides
+    .carousel-inner(role='listbox')
+      // First slide
+      .carousel-item.active
+        // First column
+        .col-lg-2.col-md-4.p-m-b-r(ng-repeat="come in comes")
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='{{come.poster[0]}}', alt='')
+              .p-stripe.stripe.dark
+                a(href="/xemphim/{{come._id}}")
+                  p
+                    | {{come.titleVi}}
+                    i.fa.fa-chevron-right
+                  //- span
+                  //-   a(style='color: white', data-toggle='tooltip', data-placement='top', title='View')
+                  //-     | 100 
+                  //-     i.fa.fa-eye(style='color:red')
+                  //-   a(style='color: white', data-toggle='tooltip', data-placement='top', title='Comments')
+                  //-     | 100 
+                  //-     i.fa.fa-comments(style='color:blue')
+                  //-   a(style='color: white', data-toggle='tooltip', data-placement='top', title='Like')
+                  //-     | 100 
+                  //-     i.fa.fa-heart(style='color:red')
+            // /.Card image
+          // /.Collection card
+        // /First column
+        // Second column
+        //- .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/3.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A2 
+                    i.fa.fa-chevron-right
+                  span
+                    a(style='color: black', data-toggle='tooltip', data-placement='top', title='View')
+                      | 100 
+                      i.fa.fa-eye(style='color:red')
+                    a(style='color: black', data-toggle='tooltip', data-placement='top', title='Comments')
+                      | 100 
+                      i.fa.fa-comments(style='color:blue')
+                    a(style='color: black', data-toggle='tooltip', data-placement='top', title='Like')
+                      | 100 
+                      i.fa.fa-heart(style='color:red')
+            // /.Card image
+          // /.Collection card
+        // /Second column
+        // Third column
+        //- .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/4.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A3 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Third column
+        // Fourth column
+        //- .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/5.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A4 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Fourth column
+        // Five column
+        //- .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/4.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A12 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          //- // /.Collection card
+        // /Five column
+        // Six column
+        //- .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/5.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A4 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          //- // /.Collection card
+        // /Six column
+      // /.First slide
+      // Second slide
+      .carousel-item
+        // First column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/6.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A5 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /First column
+        // Second column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/7.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A6 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Second column
+        // Third column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/8.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A7 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Third column
+        // Fourth column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/9.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A8 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Fourth column
+        // Five column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/4.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A12 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Five column
+        // Six column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/5.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A4 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Six column
+      // /.Second slide
+      // Third slide
+      .carousel-item
+        // First column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/10.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A9 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /First column
+        // Second column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/11.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A10 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Second column
+        // Third column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/12.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A11 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Third column
+        // Fourth column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/13.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A12 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Fourth column
+        // Five column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/4.jpg', alt='')
+              .p-stripe.stripe.dark
+                a
+                  p
+                    | Phim A12 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Five column
+        // Six column
+        .col-lg-2.col-md-4.p-m-b-r
+          // Collection card
+          .card.collection-card.z-depth-1-half
+            // Card image
+            .view.hm-zoom
+              img.img-fluid(src='/img/5.jpg', alt='')
+              .p-stripe.stripe.light
+                a
+                  p
+                    | Phim A4 
+                    i.fa.fa-chevron-right
+            // /.Card image
+          // /.Collection card
+        // /Six column
+      // /.Third slide
+    // Controls
+    .controls-top
+      a.btn-floating.btn-small.primary-color(href='#multi-item-example', data-slide='prev')
+        i.fa.fa-chevron-left
+      a.btn-floating.btn-small.primary-color(href='#multi-item-example', data-slide='next')
+        i.fa.fa-chevron-right
+    // /.Controls
+  // /.Carousel Wrapper
+// /Section: Products v.5

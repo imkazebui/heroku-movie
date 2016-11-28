@@ -1,0 +1,314 @@
+// Carousel Wrapper
+#video-carousel-example2.carousel.slide.carousel-fade(data-ride='carousel')
+  // Indicators
+  ol.carousel-indicators
+    li.active(data-target='#video-carousel-example2', data-slide-to='0')
+    li(data-target='#video-carousel-example2', data-slide-to='1')
+    li(data-target='#video-carousel-example2', data-slide-to='2')
+  // /.Indicators
+  // Slides
+  .carousel-inner(role='listbox')
+    // First slide
+    .carousel-item.active
+      // Mask color
+      .view.hm-black-light
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Strum-Away.mp4', type='video/mp4')
+        .full-bg-img
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Material Design for Bootstrap 4
+            li
+              p The most powerful and free UI KIT for Bootstrap
+            li
+              a.btn.btn-primary.btn-lg(target='_blank', href='http://mdbootstrap.com/getting-started/') Sign up!
+              a.btn.btn-default.btn-lg(target='_blank', href='http://mdbootstrap.com/material-design-for-bootstrap/') Learn more
+      // Caption
+    // /First slide
+    // Second slide
+    .carousel-item
+      // Mask color
+      .view.hm-black-light
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Beach-Ball.mp4', type='video/mp4')
+        .mask
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Lots of tutorials at your disposal
+            li
+              p And all of them are FREE!
+            li
+              a.btn.btn-primary.btn-lg(target='_blank', href='http://mdbootstrap.com/bootstrap-tutorial/') Start learning
+      // /.Caption
+    // /Second slide
+    // Third slide
+    .carousel-item
+      // Mask color
+      .view.hm-black-strong
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Nature-Sunset.mp4', type='video/mp4')
+        .mask
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Visit our support forum
+            li
+              p Our community can help you with any question
+            li
+              a.btn.btn-default.btn-lg(target='_blank', href='http://mdbootstrap.com/forums/forum/support/') Support forum
+      // /.Caption
+    // /Third slide
+  // /.Slides
+  // Controls
+  a.left.carousel-control(href='#video-carousel-example2', role='button', data-slide='prev')
+    span.icon-prev(aria-hidden='true')
+    span.sr-only Previous
+  a.right.carousel-control(href='#video-carousel-example2', role='button', data-slide='next')
+    span.icon-next(aria-hidden='true')
+    span.sr-only Next
+  // /.Controls
+// /.Carousel Wrapper
+
+section.section.container-fluid(ng-hide="show")
+  h1.section-heading Không tìm thấy phim
+//- section
+//-   ol.breadcrumb
+//-     li.breadcrumb-item
+//-       a(href='/') Home
+//-     li.breadcrumb-item
+//-       a(href='#') Phân loại
+//-     li.breadcrumb-item.active Data
+// Section: Products v.4
+section.section.container-fluid(ng-show="show")
+  h1.section-heading Tất cả phim 
+  // First row
+  .row
+    // First column
+    .col-lg-2.col-md-6.mb-r(ng-repeat=("movie in movies"))
+      // Collection card
+      .card.collection-card.z-depth-1-half
+        // Card image
+        .view.hm-zoom
+          img.img-fluid(src='{{movie.poster[0]}}', alt='')
+          .p-stripe.stripe.dark
+            a(href="xemphim/{{movie._id}}")
+              p
+                | {{movie.titleVi}} 
+                i.fa.fa-chevron-right
+        // /.Card image
+      // /.Collection card
+    // /First column
+    //- // Second column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(3).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Shorts 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Second column
+    //- // Third column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/img%20(10).jpg', alt='')
+    //-       .stripe.dark
+    //-         a
+    //-           p
+    //-             | Dresses 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Third column
+    //- // Fourth column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/img%20(12).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Accessories 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Fourth column
+    //- // Five column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(1).jpg', alt='')
+    //-       .stripe.dark
+    //-         a
+    //-           p
+    //-             | Tops 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Five column
+    //- // Six column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(3).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Shorts 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Six column
+    //- // First column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(1).jpg', alt='')
+    //-       .stripe.dark
+    //-         a
+    //-           p
+    //-             | Tops 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /First column
+    //- // Second column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(3).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Shorts 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Second column
+    //- // Third column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/img%20(10).jpg', alt='')
+    //-       .stripe.dark
+    //-         a
+    //-           p
+    //-             | Dresses 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Third column
+    //- // Fourth column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/img%20(12).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Accessories 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Fourth column
+    //- // Five column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(1).jpg', alt='')
+    //-       .stripe.dark
+    //-         a
+    //-           p
+    //-             | Tops 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Five column
+    //- // Six column
+    //- .col-lg-2.col-md-6.mb-r
+    //-   // Collection card
+    //-   .card.collection-card.z-depth-1-half
+    //-     // Card image
+    //-     .view.hm-zoom
+    //-       img.img-fluid(src='http://mdbootstrap.com/images/ecommerce/vertical/lq/img%20(3).jpg', alt='')
+    //-       .stripe.light
+    //-         a
+    //-           p
+    //-             | Shorts 
+    //-             i.fa.fa-chevron-right
+    //-     // /.Card image
+    //-   // /.Collection card
+    //- // /Six column
+  // /First row
+// /Section: Products v.4
+section.flex-center(style='height: auto;')
+  // Section heading
+  img(src='http://cdn1.blueseed.tv/Img/2015/12/BlueSeed_728x90.jpg')
+section
+  nav.flex-center
+    ul.pagination
+      li.page-item.disabled
+        a.page-link(href='#', aria-label='Previous')
+          span(aria-hidden='true') «
+          span.sr-only Previous
+      li.page-item.active
+        a.page-link(href='#')
+          | 1 
+          span.sr-only (current)
+      li.page-item
+        a.page-link(href='#') 2
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item
+        a.page-link(href='#') 4
+      li.page-item
+        a.page-link(href='#') 5
+      li.page-item
+        a.page-link(href='#', aria-label='Next')
+          span(aria-hidden='true') »
+          span.sr-only Next
+section.container-fluid
+  // <div class="card">
+  // <div class="card-block">
+  | TAGS: 
+  span.chip Jane Doe
+  span.chip Jane Doe
+  span.chip Jane Doe
+  span.chip Jane Doe
+  // </div>
+  // </div>

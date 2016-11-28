@@ -1,0 +1,74 @@
+// Carousel Wrapper
+#video-carousel-example2.carousel.slide.carousel-fade(data-ride='carousel')
+  // Indicators
+  ol.carousel-indicators
+    li.active(data-target='#video-carousel-example2', data-slide-to='0')
+    li(data-target='#video-carousel-example2', data-slide-to='1')
+    li(data-target='#video-carousel-example2', data-slide-to='2')
+  // /.Indicators
+  // Slides
+  .carousel-inner(role='listbox')
+    // First slide
+    .carousel-item.active
+      // Mask color
+      .view.hm-black-light
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Strum-Away.mp4', type='video/mp4')
+        .full-bg-img
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Tên phim 
+            li
+              p Nội dung
+      // Caption
+    // /First slide
+    // Second slide
+    .carousel-item
+      // Mask color
+      .view.hm-black-light
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Beach-Ball.mp4', type='video/mp4')
+        .mask
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Tên phim
+            li
+              p Nội dung
+      // /.Caption
+    // /Second slide
+    // Third slide
+    .carousel-item
+      // Mask color
+      .view.hm-black-strong
+        // Video source
+        video.video-full(autoplay='', loop='')
+          source(src='/video/Nature-Sunset.mp4', type='video/mp4')
+        .mask
+      // Caption
+      .carousel-caption
+        .flex-center.animated.fadeInDown
+          ul
+            li
+              h1.h1-responsive Tên phim
+            li
+              p Nội dung
+      // /.Caption
+    // /Third slide
+  // /.Slides
+  // Controls
+  a.left.carousel-control(href='#video-carousel-example2', role='button', data-slide='prev')
+    span.icon-prev(aria-hidden='true')
+    span.sr-only Previous
+  a.right.carousel-control(href='#video-carousel-example2', role='button', data-slide='next')
+    span.icon-next(aria-hidden='true')
+    span.sr-only Next
+  // /.Controls
+// /.Carousel Wrapper
